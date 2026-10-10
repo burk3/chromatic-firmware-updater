@@ -1,0 +1,6 @@
+# Intentionally empty.
+#
+# ChromaticFirmwareUpdater refuses to start unless a file with this exact name
+# exists in /etc/udev/rules.d (it only checks that the file exists, not what
+# it contains). The real rules live in 70-modretro-chromatic.rules, which has
+# to sort before 73-seat-late.rules for TAG+="uaccess" to take effect.
